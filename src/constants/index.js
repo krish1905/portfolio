@@ -121,10 +121,10 @@ import {
       iconBg: "#3e3e3e",
       date: "May 2024 - August 2024",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Conducting analysis of global fandoms on social media to identify evidence of social support using Reddit and Twitter data.",
+        "Utilizing PRAW for data scraping and preprocessing to prepare data for analysis.",
+        "Employing various topic modeling techniques, including BERTopic, NMF, and LDA, to categorize social media posts into four types of social support.",
+        "Training machine learning models based on categorized data to further analyze and understand social support dynamics in fandoms.",
       ],
     },
     {
@@ -134,10 +134,10 @@ import {
       iconBg: "#3e3e3e",
       date: "July 2023 - June 2024",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Led the development and launch of the organization's website, increasing user engagement by 30%.",
+        "Created 3D and AR models with Unity, adopted by over 5 school boards for enhanced educational experiences.",
+        "Co-hosted an event with Microsoft, attracting 200+ attendees and promoting VR and AR technologies.",
+        "Organized a hackathon at the University of Waterloo, engaging 50+ participants and fostering innovation in VR and AR.",
       ],
     },
     {
@@ -147,10 +147,10 @@ import {
       iconBg: "#3e3e3e",
       date: "July 2022 - August 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Engineered an employee management system for Canada Post, used by 10,000 employees, as part of a team of four.",
+        "Utilized .NET framework for full-stack development, enhancing the software development process by 20%.",
+        "Implemented Continuous Integration (CI) techniques, reducing bugs and errors by 30%.",
+        "Integrated front-end and back-end components, improving user experience and system performance by 25%.",
       ],
     },
 
