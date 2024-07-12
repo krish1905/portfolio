@@ -9,14 +9,16 @@ const Computers = ({ isMobile }) => {
     <mesh>
       <hemisphereLight intensity={isMobile ? 1 : 2.5} groundColor={"black"} />
       <pointLight intensity={isMobile ? 2 : 5} />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={isMobile ? 1000 : 5000}
-        castShadow
-        shadow-mapSize={isMobile ? 512 : 1024}
-      />
+      { !isMobile && (
+        <spotLight
+          position={[-20, 50, 10]}
+          angle={0.12}
+          penumbra={1}
+          intensity={5000}
+          castShadow
+          shadow-mapSize={1024}
+        />
+      )}
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.5 : 1}
@@ -45,7 +47,7 @@ const ComputersCanvas = () => {
   return (
     <Canvas
       frameloop='demand'
-      shadows
+      shadows={!isMobile}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
