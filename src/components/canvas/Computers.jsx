@@ -4,12 +4,27 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./desktop_pc/scene.gltf');
+  const desktopComputer = useGLTF('./desktop_pc/scene.gltf');
+  const mobileComputer = useGLTF('./mobile_pc/scene.gltf'); // Simplified model for mobile
+
+  // Load lower-resolution or fewer textures for mobile
+  const computerTextures = isMobile
+    ? {
+        baseColor: './textures/mobile/computer_details_baseColor.jpeg',
+        normalMap: null,
+        metallicRoughnessMap: null,
+      }
+    : {
+        baseColor: './textures/desktop/computer_details_baseColor.jpeg',
+        normalMap: './textures/desktop/computer_details_normal.png',
+        metallicRoughnessMap: './textures/desktop/computer_details_metallicRoughness.png',
+      };
+
   return (
     <mesh>
       <hemisphereLight intensity={isMobile ? 1 : 2.5} groundColor={"black"} />
       <pointLight intensity={isMobile ? 2 : 5} />
-      { !isMobile && (
+      {!isMobile && (
         <spotLight
           position={[-20, 50, 10]}
           angle={0.12}
@@ -20,7 +35,7 @@ const Computers = ({ isMobile }) => {
         />
       )}
       <primitive
-        object={computer.scene}
+        object={isMobile ? mobileComputer.scene : desktopComputer.scene}
         scale={isMobile ? 0.5 : 1}
         position={isMobile ? [0, -3, 0] : [0, -3.25, 0]}
         rotation={[0, 1.3, 0]}
